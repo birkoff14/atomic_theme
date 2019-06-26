@@ -1,0 +1,79 @@
+# This file contains default .gitignore rules. To use it, copy it to .gitignore,
+# and it will cause files like your settings.php and user-uploaded files to be
+# excluded from Git version control. This is a common strategy to avoid
+# accidentally including private information in public repositories and patch
+# files.
+#
+# Because .gitignore can be specific to your site, this file has a different
+# name; updating Drupal core will not override your custom .gitignore file.
+
+# Ignore core and vendor when managing dependencies with Composer.
+# core
+#docroot/vendor
+
+# Ignore configuration files that may contain sensitive information.
+docroot/sites/*/settings*.php
+docroot/sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+docroot/sites/*/files
+docroot/sites/*/private
+
+# Ignore SimpleTest multi-site environment.
+docroot/sites/simpletest
+
+# If you prefer to store your .gitignore file in the sites/ folder, comment
+# or delete the previous settings and uncomment the following ones, instead.
+
+# Ignore configuration files that may contain sensitive information.
+# */settings*.php
+
+# Ignore paths that contain user-generated content.
+# */files
+# */private
+
+# Ignore SimpleTest multi-site environment.
+# simpletest
+# Ignore binaries.
+/bin
+
+# Ignore non-custom parts of Drupal.
+#/docroot/core
+#/docroot/modules/contrib
+#/docroot/profiles/contrib
+#/docroot/themes/contrib
+#/docroot/sites/default/files
+
+# Ignore Composer-managed dependencies.
+#vendor/
+
+# Ignore SASS caching files
+node_modules/
+.sass-cache
+*.scssc
+docroot/sites/*/files/*
+docroot/sites/*/private
+docroot/*.sql
+*.sql
+*.tar.gz
+*.tar
+*.gz
+
+# settings file
+docroot/sites/default/settings.php
+docroot/sites/default/settings.local.php
+docroot/sites/settings.local.php
+
+#IDE
+.idea/
+.DS_Store
+
+# Ignore Lando files
+.lando.yml
+
+# Config files from Drupal Sync
+#config/ams.settings.yml
+# Ignore docker files
+docker-compose.yml
+Makefile
+.env

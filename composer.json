@@ -1,0 +1,78 @@
+{
+  "name": "drupal-composer/drupal-project",
+  "description": "Project template",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Daniel Serna",
+      "email": "acidaniel@gmail.com",
+      "role": "Maintainer"
+    }
+  ],
+  "repositories": {
+    "drupal": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+      },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "composer/installers": "^1.5.0",
+    "cweagans/composer-patches": "1.6.4",
+    "drupal/core": "^8.7",
+    "drush/drush": "^9.5",
+    "drupal/components": "^1.0",
+    "drupal/console": "~1.0",
+    "drupal/twig_tweak": "^2.1",
+    "drupal/adminimal_theme": "^1.4",
+    "drupal/adminimal_admin_toolbar": "^1.9",
+  },
+  "require-dev": {
+    "drupal/coder": "^8",
+    "drupal/drupal-extension": "^3",
+    "drupal/devel": "^1.2"
+  },
+  "extra": {
+    "enable-patching": true,
+    "patches": {
+      "drupal/core": {
+        "#2907810 Add $entity->toUrl methods to whitelist in twig sandbox policy": "https://www.drupal.org/files/issues/2018-06-27/2907810-38.patch",
+        "#2999491 Add $entity->toUrl methods to whitelist in twig sandbox policy": "https://www.drupal.org/files/issues/2019-04-13/reusable-inline-blocks-2999491-9.patch",
+        "#3044211 Fix layout_builder_post_update_fix_tempstore_keys": "https://www.drupal.org/files/issues/2019-03-28/3044211-remove-broken-tempstore-section-storage-2.patch",
+        "#3055147 Fix Perform layout_builder_entity_presave for content entities only.": "https://www.drupal.org/files/issues/2019-05-16/presave-only-content-entities-3055147.patch"
+      }
+    },
+    "merge-plugin": {
+      "include": [
+        "profiles/boldr/composer.json"
+      ],
+      "recurse": true,
+      "replace": false,
+      "merge-extra": false
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "installer-paths": {
+      "core": ["type:drupal-core"],
+      "modules/contrib/{$name}": ["type:drupal-module"],
+      "profiles/contrib/{$name}": ["type:drupal-profile"],
+      "themes/contrib/{$name}": ["type:drupal-theme"],
+      "../drush/contrib/{$name}": ["type:drupal-drush"],
+      "modules/custom/{$name}": ["type:drupal-custom-module"],
+      "themes/custom/{$name}": ["type:drupal-custom-theme"],
+      "sites/all/libraries/slick": ["type:npm-asset/slick-carousel"],
+      "sites/all/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ]
+    }
+  }
+}
