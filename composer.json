@@ -1,78 +1,128 @@
 {
-  "name": "drupal-composer/drupal-project",
-  "description": "Project template",
-  "type": "project",
-  "authors": [
-    {
-      "name": "Daniel Serna",
-      "email": "acidaniel@gmail.com",
-      "role": "Maintainer"
-    }
-  ],
-  "repositories": {
-    "drupal": {
-        "type": "composer",
-        "url": "https://packages.drupal.org/8"
-      },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "require": {
-    "composer/installers": "^1.5.0",
-    "cweagans/composer-patches": "1.6.4",
-    "drupal/core": "^8.7",
-    "drush/drush": "^9.5",
-    "drupal/components": "^1.0",
-    "drupal/console": "~1.0",
-    "drupal/twig_tweak": "^2.1",
-    "drupal/adminimal_theme": "^1.4",
-    "drupal/adminimal_admin_toolbar": "^1.9",
-  },
-  "require-dev": {
-    "drupal/coder": "^8",
-    "drupal/drupal-extension": "^3",
-    "drupal/devel": "^1.2"
-  },
-  "extra": {
-    "enable-patching": true,
-    "patches": {
-      "drupal/core": {
-        "#2907810 Add $entity->toUrl methods to whitelist in twig sandbox policy": "https://www.drupal.org/files/issues/2018-06-27/2907810-38.patch",
-        "#2999491 Add $entity->toUrl methods to whitelist in twig sandbox policy": "https://www.drupal.org/files/issues/2019-04-13/reusable-inline-blocks-2999491-9.patch",
-        "#3044211 Fix layout_builder_post_update_fix_tempstore_keys": "https://www.drupal.org/files/issues/2019-03-28/3044211-remove-broken-tempstore-section-storage-2.patch",
-        "#3055147 Fix Perform layout_builder_entity_presave for content entities only.": "https://www.drupal.org/files/issues/2019-05-16/presave-only-content-entities-3055147.patch"
-      }
-    },
-    "merge-plugin": {
-      "include": [
-        "profiles/boldr/composer.json"
-      ],
-      "recurse": true,
-      "replace": false,
-      "merge-extra": false
-    },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
+    "name": "Daniel Serna",
+    "description": "A Drupal 8.",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Daniel Serna",
+            "email": "acidaniel@gmail.com"
+        }
     ],
-    "installer-paths": {
-      "core": ["type:drupal-core"],
-      "modules/contrib/{$name}": ["type:drupal-module"],
-      "profiles/contrib/{$name}": ["type:drupal-profile"],
-      "themes/contrib/{$name}": ["type:drupal-theme"],
-      "../drush/contrib/{$name}": ["type:drupal-drush"],
-      "modules/custom/{$name}": ["type:drupal-custom-module"],
-      "themes/custom/{$name}": ["type:drupal-custom-theme"],
-      "sites/all/libraries/slick": ["type:npm-asset/slick-carousel"],
-      "sites/all/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ]
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "platform": {
+            "php": "7.0.8"
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "desandro/masonry",
+                "version": "3.3.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/masonry/archive/v3.3.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "desandro/imagesloaded",
+                "version": "3.1.8",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/imagesloaded/archive/v3.1.8.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "4.2.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/enyo/dropzone",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:palantirnet/workbench_tabs.git"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.0",
+        "desandro/imagesloaded": "3.1.8",
+        "desandro/masonry": "3.3.1",
+        "drupal-composer/drupal-scaffold": "^2.3",
+        "drupal/coder": "^8.0",
+        "drupal/components": "^1.1",
+        "drupal/config_installer": "^1.8",
+        "drupal/console": "~1.0",
+        "drupal/core": "^8.5",
+        "drupal/ctools": "^3.0",
+        "drupal/easy_breadcrumb": "^1.8",
+        "drupal/editor_file": "^1.2",
+        "drupal/entity_browser": "^1.5",
+        "drupal/extlink": "^1.1",
+        "drupal/field_group": "^1.0",
+        "drupal/file_browser": "^1.1",
+        "drupal/google_tag": "^1.0",
+        "drupal/image_url_formatter": "^1.0@beta",
+        "drupal/metatag": "^1.5",
+        "drupal/paragraphs": "^1.3",
+        "drupal/pathauto": "^1.2",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/simple_sitemap": "^2.12",
+        "drupal/twig_tweak": "^2.3",
+        "drupal/ui_patterns": "^1.0",
+        "drupal/video_embed_field": "^2.0",
+        "drupal/webform": "^5.0@RC",
+        "drupal/workbench": "^1.0",
+        "enyo/dropzone": "4.2.0"
+    },
+    "require-dev": {
+        "behat/behat": "^3.1",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "^2.2",
+        "behat/mink-goutte-driver": "^1.2",
+        "drupal/drupal-extension": "^3.1"
+    },
+    "suggest": {
+        "cweagans/composer-patches": "Try ^1.0. Apply patches to packages, especially Drupal.org contrib."
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "post-create-project-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    },
+    "extra": {
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"],
+            "docroot/libraries/{$name}": ["type:drupal-library"]
+        }
     }
-  }
 }

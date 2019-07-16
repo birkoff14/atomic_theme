@@ -77,3 +77,9 @@ docroot/sites/settings.local.php
 docker-compose.yml
 Makefile
 .env
+db
+vendor
+docroot/core
+docroot/modules/contrib
+docroot/profiles
+docroot/libraries
