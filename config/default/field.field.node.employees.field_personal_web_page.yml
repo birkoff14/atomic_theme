@@ -1,0 +1,23 @@
+uuid: 432b805a-b180-4eaf-ba0c-ed73a98003bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_web_page
+    - node.type.employees
+  module:
+    - link
+id: node.employees.field_personal_web_page
+field_name: field_personal_web_page
+entity_type: node
+bundle: employees
+label: 'Personal Web Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

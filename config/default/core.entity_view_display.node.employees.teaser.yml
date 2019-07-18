@@ -1,0 +1,32 @@
+uuid: 6b65b510-d2f6-4260-9f70-4995e1398a51
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.employees.field_job_title
+    - field.field.node.employees.field_personal_web_page
+    - field.field.node.employees.field_profile_image
+    - field.field.node.employees.field_salary
+    - field.field.node.employees.field_taxonomy_term
+    - node.type.employees
+  module:
+    - user
+id: node.employees.teaser
+targetEntityType: node
+bundle: employees
+mode: teaser
+content:
+  field_job_title:
+    type: basic_string
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_personal_web_page: true
+  field_profile_image: true
+  field_salary: true
+  field_taxonomy_term: true
+  links: true

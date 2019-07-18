@@ -1,0 +1,8 @@
+uuid: 76d74c4f-4816-4ef8-9c82-d9548fd67ebb
+langcode: en
+status: true
+dependencies: {  }
+name: Employee
+vid: employee
+description: 'Al momento de capturar contenido sean checkboxes'
+weight: 0
