@@ -1,0 +1,22 @@
+include .env
+
+all: | up install
+
+up:
+	echo "Setting up the containers"
+	docker-compose up -d
+	
+down:
+	echo "Stopping containers"
+	docker-compose down
+
+install:
+	echo "Install Drupal 8 & dependencies"
+	docker-compose exec -T php bash -c "composer install"
+	docker-compose exec -T php bash -c "drush si --db-url=mysql://${PROFILE_NAME}:${PROFILE_NAME}@mariadb/${PROFILE_NAME} --verbose"
+	docker-compose exec -T php bash -c "drush user:password admin ${ADMIN_PASS}"
+
+
+shell:
+	docker-compose exec php bash
+	

@@ -75,7 +75,6 @@ docroot/sites/settings.local.php
 #config/ams.settings.yml
 # Ignore docker files
 docker-compose.yml
-Makefile
 .env
 db
 vendor
