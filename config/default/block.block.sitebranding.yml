@@ -1,0 +1,23 @@
+uuid: 892d3acb-2d30-4449-82f7-ba45abc4d6c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - restaurant
+id: sitebranding
+theme: restaurant
+region: logo
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

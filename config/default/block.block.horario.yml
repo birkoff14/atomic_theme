@@ -1,0 +1,25 @@
+uuid: 2435ec14-5126-458a-a697-685898335d4d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ac676774-34b2-4031-87be-5a340f77ae15'
+  module:
+    - block_content
+  theme:
+    - restaurant
+id: horario
+theme: restaurant
+region: footer
+weight: -2
+provider: null
+plugin: 'block_content:ac676774-34b2-4031-87be-5a340f77ae15'
+settings:
+  id: 'block_content:ac676774-34b2-4031-87be-5a340f77ae15'
+  label: Horario
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

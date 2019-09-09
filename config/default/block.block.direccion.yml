@@ -1,0 +1,25 @@
+uuid: e93cb9eb-3190-47ef-9585-f0231f9d7d9c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a5cc4140-39f3-43b6-ba2b-194bb683c62c'
+  module:
+    - block_content
+  theme:
+    - restaurant
+id: direccion
+theme: restaurant
+region: footer
+weight: -1
+provider: null
+plugin: 'block_content:a5cc4140-39f3-43b6-ba2b-194bb683c62c'
+settings:
+  id: 'block_content:a5cc4140-39f3-43b6-ba2b-194bb683c62c'
+  label: Dirección
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

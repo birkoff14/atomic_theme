@@ -1,0 +1,24 @@
+uuid: 137c8add-0833-43b6-b5e0-9c711fdec4cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.top5
+  module:
+    - views
+  theme:
+    - restaurant
+id: views_block__top5_block_latest_articles
+theme: restaurant
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:top5-block_latest_articles'
+settings:
+  id: 'views_block:top5-block_latest_articles'
+  label: Recetas
+  provider: views
+  label_display: visible
+  views_label: Recetas
+  items_per_page: none
+visibility: {  }

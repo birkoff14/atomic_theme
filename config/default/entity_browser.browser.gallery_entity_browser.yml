@@ -1,0 +1,60 @@
+uuid: 949a2317-ac78-4b1e-abfb-d8cbe30d58e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.gallery
+  module:
+    - dropzonejs_eb_widget
+    - views
+name: gallery_entity_browser
+label: 'Gallery Entity Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  19c1d116-f887-4155-b67e-2aa4efa021c1:
+    settings:
+      view: gallery
+      view_display: gallery_entity_browser
+      submit_text: 'Select Image'
+      auto_select: false
+    uuid: 19c1d116-f887-4155-b67e-2aa4efa021c1
+    weight: 1
+    label: Gallery
+    id: view
+  e514b9b0-7b85-428f-a8ac-67d90789ac11:
+    settings:
+      upload_location: 'public://'
+      multiple: true
+      submit_text: 'Select images'
+      extensions: 'jpg jpeg gif png'
+    uuid: e514b9b0-7b85-428f-a8ac-67d90789ac11
+    weight: 2
+    label: Upload
+    id: upload
+  701de0b1-6969-4c41-9d54-eb4e5a793d5b:
+    settings:
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select images'
+      auto_select: false
+    uuid: 701de0b1-6969-4c41-9d54-eb4e5a793d5b
+    weight: 3
+    label: 'Drag & Drop'
+    id: dropzonejs

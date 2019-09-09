@@ -1,0 +1,20 @@
+uuid: 2c105537-b235-49e5-a4cf-7be7228c0426
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - restaurant
+id: mainpagecontent
+theme: restaurant
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
