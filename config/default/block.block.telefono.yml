@@ -1,0 +1,25 @@
+uuid: 920dfe42-f28f-4ef2-8e30-8fb1ead85914
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4a1e61c1-455c-4f83-9987-5413f3b0a4a5'
+  module:
+    - block_content
+  theme:
+    - restaurant
+id: telefono
+theme: restaurant
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:4a1e61c1-455c-4f83-9987-5413f3b0a4a5'
+settings:
+  id: 'block_content:4a1e61c1-455c-4f83-9987-5413f3b0a4a5'
+  label: Telefono
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
