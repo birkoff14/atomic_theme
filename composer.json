@@ -69,6 +69,7 @@
     ],
     "require": {
         "composer/installers": "^1.0",
+        "cweagans/composer-patches": "1.6.4",
         "desandro/imagesloaded": "3.1.8",
         "desandro/masonry": "3.3.1",
         "drupal-composer/drupal-scaffold": "^2.3",
@@ -125,6 +126,13 @@
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"],
             "docroot/libraries/{$name}": ["type:drupal-library"]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "#2982052 Allow an install hook in profiles installing from configuration": "https://www.drupal.org/files/issues/2018-11-27/2982052-22.patch",
+                "2357215 Clean up hook_install() in Standard Install Profile": "https://www.drupal.org/files/issues/2019-03-11/2357215-34.patch"
+            }
         }
     }
 }
