@@ -1,0 +1,16 @@
+name: El rincon de Yoya
+type: theme
+base theme: stable
+description: 'Tema para el restaurante de Cindy'
+core: 8.x
+
+libraries:
+  - restaurant/global
+
+regions:
+  logo: Logo
+  menu: Menu
+  sidebar: Sidebar
+  content: Content
+  footer: Footer
+

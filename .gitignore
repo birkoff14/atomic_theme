@@ -82,3 +82,5 @@ docroot/core
 docroot/modules/contrib
 docroot/profiles
 docroot/libraries
+*.css
+css

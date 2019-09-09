@@ -1,0 +1,78 @@
+@import "typography";
+@import "variables";
+
+body {
+  
+  color: $pink;
+  font-family: $slabo;
+  //font-size: 18px;
+
+  .container {
+
+    max-width: 75em;
+    margin: 0 auto;
+
+  .region {
+
+    &__logo {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      }
+    
+    &__menu {
+
+      &-main {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        background-color: $grey;
+        font-weight: 700;
+        align-items: center;
+        height: 40px;
+        
+        a {
+          color: $white;
+          text-decoration: none;
+        }          
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__main {
+    display: flex;
+
+    &-content {
+      flex: 0 0 75%;
+      padding-right: 2em;
+    }
+
+    &-sidebar {
+      
+      h2 {
+        text-align: center;
+        background-color: $grey;
+        color: $white;
+        padding: 0.1em;
+        text-transform: uppercase;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &-content {
+      font-size: 18px;
+      color: $grey;
+      text-align: justify;
+    }
+  }
+}
+}

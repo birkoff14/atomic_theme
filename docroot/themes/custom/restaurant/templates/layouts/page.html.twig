@@ -1,0 +1,15 @@
+<div class="container">
+  {% if page.logo or page.menu %}
+  <div class="container__nav">
+    <div class="region__logo">{{ page.logo }}</div>
+    <div class="region__menu">{{ page.menu }}</div>
+  </div>
+  {% endif %}  
+  <div class="container__main">
+    <div class="container__main-content region__content">{{ page.content }}</div>
+    {% if page.sidebar %}
+    <div class="container__main-sidebar region__sidebar">{{ page.sidebar }}</div>
+    {% endif %}
+  </div>
+  <div class="region__footer">{{ page.footer }}</div>
+</div>

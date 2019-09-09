@@ -1,0 +1,17 @@
+{
+    "name": "rinconyoya",
+    "version": "0.0.1",
+    "dependencies": {
+        "browser-sync": "^2.23.6",
+        "breakpoint-sass": "^2.7.1",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.1.0",
+        "gulp-sass": "^3.2.1",
+        "gulp-watch": "^4.3.11",
+        "gulp-sass-glob": "^1.0.9",
+        "gulp-sourcemaps": "^2.6.4",
+        "font-awesome": "4.7.0"
+    },
+    "description": "Paquetes",
+    "main": "gulpfile.js"
+}
