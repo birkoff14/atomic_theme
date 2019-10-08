@@ -1,11 +1,25 @@
+@import "config";
+
+//Colors
 $pink: #ec897c;
 $red: #b20000;
 $black: #000000;
 $grey: #3E3D3C;
 $white: #FFFFFF;
+$grey-light: #E8E2D6;
 
 // Fonts
 $slabo: 'Fira Sans', sans-serif;
 
+//Font Awesome
+$fa-font-path: '../css/webfonts';
+
 //Define breakpoint for diferentes resolutions
-//$small-screen = 
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$mobile: $xs $sm;
+$tablet: $xs $md;

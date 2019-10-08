@@ -3,6 +3,8 @@ global:
   css:
     base:
       css/base.css: {}
+  js:
+    js/build/menu.js: {}    
   dependencies:
     - core/drupal
     - core/jquery

@@ -1,0 +1,55 @@
+.region__sidebar {
+  background-color:   $grey-light;
+  border: 1px solid $grey;
+
+  h2 {
+    margin: 0;
+    text-align: center;
+    background-color: $grey;
+    color: $white;
+    padding: 0.1em;
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    margin: 0;
+    height: 1.5em;
+  }
+
+  &-wrapper {
+    
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $grey;
+      color: $white;          
+    }
+    padding-right: 1em;
+    padding-left: 1em;
+
+    margin-bottom: 1em;
+  }
+
+  &-titulo {
+    margin: 1em 0;
+  }
+
+  &-fecha {
+    font-size: 17px;
+    font-style: italic;
+    height: 1.5em;
+  }
+
+  &-categoria {
+    font-size: 16px;
+    font-style: italic;
+    height: 1.5em;
+  }
+
+  &-imagen {
+    margin: 1em 0;
+  }
+}

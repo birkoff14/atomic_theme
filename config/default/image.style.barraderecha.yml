@@ -1,0 +1,15 @@
+uuid: 896b9a4e-ada8-4bb8-868f-07eeab12484a
+langcode: en
+status: true
+dependencies: {  }
+name: barraderecha
+label: barraDerecha
+effects:
+  1f1428c1-4e89-411c-81b7-f74830cb3ced:
+    uuid: 1f1428c1-4e89-411c-81b7-f74830cb3ced
+    id: image_crop
+    weight: 1
+    data:
+      width: 232
+      height: 180
+      anchor: center-center

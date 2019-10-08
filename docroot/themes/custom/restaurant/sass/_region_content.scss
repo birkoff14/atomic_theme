@@ -1,0 +1,14 @@
+.region__content {
+
+  flex: 0 0 75%;
+  padding-right: 2em;
+  font-size: 18px;
+  color: $grey;
+  text-align: justify;
+
+  @include breakpoint($tablet) {
+
+    padding-right: initial;
+
+  }
+}

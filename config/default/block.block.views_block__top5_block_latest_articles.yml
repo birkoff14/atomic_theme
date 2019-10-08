@@ -1,4 +1,4 @@
-uuid: 137c8add-0833-43b6-b5e0-9c711fdec4cb
+uuid: b8139553-8e58-4da6-8db3-97aa86fbf35d
 langcode: en
 status: true
 dependencies:
@@ -16,9 +16,9 @@ provider: null
 plugin: 'views_block:top5-block_latest_articles'
 settings:
   id: 'views_block:top5-block_latest_articles'
-  label: Recetas
+  label: ''
   provider: views
-  label_display: visible
-  views_label: Recetas
+  label_display: '0'
+  views_label: ''
   items_per_page: none
 visibility: {  }

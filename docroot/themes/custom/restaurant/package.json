@@ -9,9 +9,12 @@
         "gulp-sass": "^3.2.1",
         "gulp-watch": "^4.3.11",
         "gulp-sass-glob": "^1.0.9",
-        "gulp-sourcemaps": "^2.6.4",
-        "font-awesome": "4.7.0"
+        "gulp-sourcemaps": "^2.6.4"
     },
     "description": "Paquetes",
-    "main": "gulpfile.js"
+    "main": "gulpfile.js",
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.10.2",
+        "gulp-uglify": "^3.0.2"
+    }
 }
