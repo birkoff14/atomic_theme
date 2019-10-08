@@ -1,0 +1,11 @@
+name: Recipes
+description: Creates a page showing "Hello World".
+package: Custom
+
+type: module
+core: 8.x
+
+# Note: do not add the 'version' or 'project' properties yourself.
+# They will be added automatically by the packager on drupal.org.
+# version: 1.0
+# project: 'hello_world'

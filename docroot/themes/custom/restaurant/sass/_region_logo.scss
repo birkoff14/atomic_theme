@@ -1,0 +1,14 @@
+.region__logo {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  img {
+
+    @include breakpoint($tablet) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

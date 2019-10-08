@@ -61,9 +61,9 @@ services:
     image: wodby/mariadb:10.3-3.6.0
     container_name: "${PROFILE_NAME}_mariadb"
     volumes:
-        - ./db:/var/lib/mysql
+        #- ./db:/var/lib/mysql
         #Uncomment next line if you need restore a db backup
-        #- ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here
+        - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here
     environment:
       MYSQL_DATABASE: ${PROFILE_NAME}
       MYSQL_USER: ${PROFILE_NAME}
@@ -71,8 +71,8 @@ services:
       MYSQL_ROOT_PASSWORD: d8root
 
   traefik:
-    image: traefik
-    container_name: "${PROFILE_NAME}_traefik"
+    image: traefik:v1.7.16-alpine
+    container_name: "${PROFILE_NAME}_traefik"    
     command: -c /dev/null --web --docker --logLevel=INFO
     ports:
       - '${PROFILE_PORT}:80'

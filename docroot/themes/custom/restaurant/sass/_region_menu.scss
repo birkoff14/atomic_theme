@@ -1,0 +1,72 @@
+.region__menu {
+
+  background-color: $grey;
+
+  @include breakpoint($mobile) {
+    .icon_menu {
+      display: block !important;
+      align-content: center;
+      justify-content: center;
+    }
+
+    #block-mainnavigation {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      border-bottom: 1px solid gray;
+      width: 100%;
+      padding: 0.5em 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+
+  .icon_menu {
+    color: $pink;
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  &-main {
+
+    @include breakpoint($mobile) {
+      flex-direction: column;
+      height: auto;
+      display: none;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-weight: 700;
+    align-items: center;
+    height: 40px;
+    
+    a {
+      color: $white;
+      text-decoration: none;
+    &:before {
+      padding: 10px;
+      }
+    }
+  }
+}

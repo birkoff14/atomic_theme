@@ -1,0 +1,16 @@
+recipes.path:
+  path: '/recipes'
+  defaults: 
+    _controller: '\Drupal\recipes\Controller\Recipes::dataJson'
+    _title: 'Receta'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
+
+
+recipes.node:
+  path: '/recipes/{id}'
+  defaults:
+    _controller: '\Drupal\recipes\Controller\Recipes::numNode'
+  requirements:
+    _permission: 'access content'
