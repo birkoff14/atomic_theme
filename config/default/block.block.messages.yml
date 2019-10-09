@@ -1,4 +1,4 @@
-uuid: 2c105537-b235-49e5-a4cf-7be7228c0426
+uuid: b34b9761-fbb3-489a-8015-9d481412d428
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - system
   theme:
     - restaurant
-id: mainpagecontent
+id: messages
 theme: restaurant
 region: content
-weight: -2
+weight: -3
 provider: null
-plugin: system_main_block
+plugin: system_messages_block
 settings:
-  id: system_main_block
-  label: 'Main page content'
+  id: system_messages_block
+  label: Messages
   provider: system
   label_display: '0'
 visibility: {  }
