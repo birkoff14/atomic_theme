@@ -243,22 +243,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: recipes/v2
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -266,7 +250,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: recipes/v3
+      path: recipes-v2
       style:
         type: serializer
         options:

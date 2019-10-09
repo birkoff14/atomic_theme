@@ -1,0 +1,21 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Url;
+
+function restaurant_form_webform_submission_contacts_add_form_alter (&$form, FormStateInterface $form_state, $form_id) {  
+  
+  $form['elements']['name']['#required'] = TRUE;
+  $form['elements']['name']['#placeholder'] = 'Name';
+  $form['elements']['email']['#placeholder'] = 'Email';
+  $form['actions']['submit']['#value'] = 'Send';
+  $form['actions']['submit']['#submit'][] = 'contact_redirect';
+  
+}
+
+function contact_redirect(&$form, FormStateInterface $form_state) {
+
+  $form_state->setRedirect('<front>');
+
+}
